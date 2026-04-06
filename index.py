@@ -67,6 +67,9 @@ kontexts = ["yo","tú", "él|ella", "nosotr-os|as","vosotr-os|as","ell-os|as"]
 presente_end_ar = ["o","as","a","amos","áis","an"]
 presente_end_erir = ["o","es","e","imos","ís","en"]
 
+indefinido_end_ar = ["é","aste","ó","amos","asteis","aron"]
+indefinido_end_erir = ["í","iste","ió","imos","isteis","ieron"]
+
 
 @app.route('/')
 def menu():
