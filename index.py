@@ -61,6 +61,7 @@ presente = [
     ["abrir", "abr"],
     ["compartir", "compart"]
 ]
+
 kontexts = ["yo","tú", "él|ella", "nosotr-os|as","vosotr-os|as","ell-os|as"]
 
 
