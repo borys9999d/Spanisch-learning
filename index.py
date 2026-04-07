@@ -11,7 +11,7 @@ common_words = [
     {"ser": "to be (essential|permanent quality)"},#0
     {"estar": "to be (temporary state)"},#1
     {"tener": "to have"},#2
-    {"hacer": "to do|make"},#3
+    {"hacer": "to do|make"},#3  
     {"ir": "to go"},#4
     {"decir": "to say|tell"},#5
     {"poder": "to be able to|can"},#6
@@ -61,6 +61,7 @@ presente = [
     ["abrir", "abr"],
     ["compartir", "compart"]
 ]
+
 
 kontexts = ["yo","tú", "él|ella", "nosotr-os|as","vosotr-os|as","ell-os|as"]
 
