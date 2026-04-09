@@ -88,17 +88,21 @@ def vocabs():
     resp = make_response(render_template('Vocabs_menu.html', common_words_progress=valI, confusing_similarities_progress=valII))
 
     # Overwrite (replace) the cookie by setting it again with the same name
-    if int(request.cookies.get('common_words_progress')) > 100:
-        valI = 99
-    elif int(request.cookies.get('common_words_progress')) < -100:
-        valI = -99
-    elif int(request.cookies.get('confusing_similarities_progress')) > 100:
-        valII = 99
-    elif int(request.cookies.get('confusing_similarities_progress')) < -100:
-        valII = -99
+    try:
+        if int(request.cookies.get('common_words_progress')) > 100:
+            valI = 99
+        elif int(request.cookies.get('common_words_progress')) < -100:
+            valI = -99
+        elif int(request.cookies.get('confusing_similarities_progress')) > 100:
+            valII = 99
+        elif int(request.cookies.get('confusing_similarities_progress')) < -100:
+            valII = -99
 
 
-    else:pass
+        else:pass
+    except:
+        valI = 0
+        valII = 0
 
     resp = make_response(render_template('Vocabs_menu.html', common_words_progress=valI,\
         confusing_similarities_progress=valII))
