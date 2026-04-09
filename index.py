@@ -183,21 +183,12 @@ def words(set, back, word_id, easy, was_front, was_back):
                 else:pass
                 o += 1
         else:
-            q = 0
-            for p in selected_set:
-                if p == {was_back:was_front}:
-                    if not selected_set.count(p) >= 3 and not selected_set.count(p) == 1:
-                        selected_set.pop(q)
-                        print("\n",p, "l. 75" )
-                        q+=1
-                        break
-                        
-                    else:
-                        q+=1
-                        print("\n",p, "l. 81" )
-                else: 
-                    q+=1
-                    print("\n",p, "l. 84" )
+            if selected_set.count(selected_set[(int(word_id))]) != 1 :
+                selected_set.pop(int(word_id))
+            
+            for n in selected_set:
+                print("\n",n, "l. 190" )
+            
             try:
                 if set == 'most_common':
                     t=  request.cookies.get('common_words_progress')
@@ -311,7 +302,8 @@ def presente_backward():
 if __name__ == "__main__":
     # 1. Get the port from the environment variable (Render sets this automatically)
     # 2. Default to 10000 if PORT isn't found (local testing)
-    port = int(os.environ.get("PORT", 10000))
+    # port = int(os.environ.get("PORT", 10000))
     
     # host='0.0.0.0' tells Flask to listen on all public IPs
-    app.run(host='0.0.0.0', port=port)
+    #app.run(host='0.0.0.0', port=port)
+    app.run(debug=True)
